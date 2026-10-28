@@ -1,0 +1,1 @@
+GatewayClientRequestError: FailoverError: LLM request failed: network connection error.
