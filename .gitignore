@@ -1,5 +1,10 @@
 legacy_log_parser
+legacy_log_parser_fixed
 payload.bin
 markers
+
+test_max.txt
+test_over.txt
+test_short.txt
 
 notes.md

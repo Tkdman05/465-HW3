@@ -36,3 +36,32 @@ gcc -O0 -g -fno-stack-protector -no-pie -Wl,-z,noexecstack \
 5. Verify marker created: `ls markers/ret2win.txt`
 
 ## Task 2: Trace an agent-mediated invocation
+
+## Task 2: Fix and harden the program
+
+
+## Task 3: Fix and Harden the Program
+
+### Compile with Security Hardening
+```bash
+gcc -O2 -g -fstack-protector-strong -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 \
+    -fPIE -pie -Wl,-z,relro,-z,now -Wl,-z,noexecstack \
+    -Wall -Wextra -Werror \
+    -o legacy_log_parser_fixed src/legacy_log_parser_fixed.c
+```
+
+### Compare Security Properties
+```bash
+checksec --file=./legacy_log_parser        # Vulnerable version
+checksec --file=./legacy_log_parser_fixed  # Hardened version
+```
+
+### Test Cases
+```bash
+./evidence/task3/run_tests.sh
+
+- [1] Valid short input (processes)
+- [2] Exactly 128 bytes (processes)  
+- [3] 129 bytes or more (rejected)
+- [4] missing file (rejected)
+- [5] Original payload.bin (rejected)
