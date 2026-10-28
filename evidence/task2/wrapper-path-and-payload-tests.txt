@@ -1,0 +1,11 @@
+outside path: wrapper_exit=2
+Rejected: file must be a regular direct child of the inbox
+benign inbox file: wrapper_exit=0
+Parsing log file: /proc/self/fd/3 (14 bytes)
+Log content (first 20 bytes): normal sample.
+Log parsing completed.
+parser_exit_code=0
+exploit payload: wrapper_exit=1
+parser_exit_code=-11
+hw3_marker_exists=True
+ret2win successful

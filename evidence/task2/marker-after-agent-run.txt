@@ -1,0 +1,2 @@
+2026-10-27 23:36:53.830450935 -0400 19 markers/ret2win.txt
+ret2win successful

@@ -1,0 +1,27 @@
+=== Testing Fixed Parser ===
+
+[TEST 1] Valid short input:
+Parsing log file: test_short.txt (5 bytes)
+Log content (first 20 bytes): test.
+Log parsing completed.
+
+[TEST 2] Exactly 128 bytes (maximum allowed):
+Parsing log file: test_max.txt (128 bytes)
+Log content (first 20 bytes): AAAAAAAAAAAAAAAAAAAA
+Log parsing completed.
+
+[TEST 3] One byte over limit (129 bytes):
+Parsing log file: test_over.txt (129 bytes)
+Error: Input size (129 bytes) exceeds buffer size (128 bytes)
+Rejecting oversized input to prevent buffer overflow
+
+[TEST 4] Missing file:
+Error: Cannot open file missing.txt
+
+[TEST 5] Original exploit payload (160 bytes):
+Parsing log file: ./payload.bin (160 bytes)
+Error: Input size (160 bytes) exceeds buffer size (128 bytes)
+Rejecting oversized input to prevent buffer overflow
+Log parsing completed.
+
+=== All tests completed ===

@@ -1,0 +1,2 @@
+Port check for configured model endpoint:
+curl: (7) Failed to connect to 127.0.0.1 port 8899 after 1 ms: Couldn't connect to server

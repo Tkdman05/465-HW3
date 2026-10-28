@@ -1,0 +1,8 @@
+Parsing log file: inbox/payload.bin (160 bytes)
+Log content (first 20 bytes): AAAAAAAAAAAAAAAAAAAA
+[*] win() function reached!
+[+] Created markers/ret2win.txt
+[-] Failed to read /opt/agentsec/decoy.txt
+parser_shell_exit=139
+marker=markers/ret2win.txt size=19 modified=2026-10-28 10:44:51.712113179 -0400
+ret2win successful
