@@ -27,3 +27,9 @@ A separate URL test is preserved in `evidence/task2/agent-request.txt`, `evidenc
 2. **The agent proposes a tool call:** After reading the skill and payload, it called `exec` with the wrapper and payload path. The user had asked only for a summary.
 3. **Policy allows or blocks the call:** The wrapper accepted this path because it points to a regular file directly inside the permitted inbox. Its outside-path check was verified separately. The URL test shows a different policy boundary: `web_fetch` blocked a loopback address.
 4. **The native parser contains the overflow:** Task 1's `vulnerable_copy` copies up to 512 bytes into a 128-byte stack buffer without checking the destination size. The 160-byte payload reached `win()`, created the marker, and then caused a signal 11 exit. The wrapper's output in the agent trace is `parser_exit_code=-11`.
+
+## Submission layout and working-directory correction
+
+The original agent trace above was recorded before a packaging correction. At that time, the wrapper launched the parser from the `465-HW3` checkout, so the marker in `marker-after-agent-run.txt` was in `465-HW3/markers/`. The original skill and wrapper are preserved as `evidence/task2/skill-at-original-agent-run.md` and `evidence/task2/wrapper-at-original-agent-run.py` so the saved trace can be interpreted against the exact version used.
+
+The current submission layout also contains `web/adversarial.html` and `skills/legacy-parser/run_parser.sh`. The current wrapper launches the parser from `~/csce465-agentsec/hw3`, the runtime directory required by the assignment. `evidence/task2/wrapper-path-and-payload-tests.txt` records that the corrected wrapper rejects an outside file, accepts a normal inbox file, and processes the exploit payload. That corrected run created `hw3/markers/ret2win.txt`. The original agent trace remains the evidence for the agent's decision; the later wrapper test verifies the corrected runtime path.

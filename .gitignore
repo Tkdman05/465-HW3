@@ -3,3 +3,5 @@ payload.bin
 markers
 
 notes.md
+__pycache__/
+*.pyc

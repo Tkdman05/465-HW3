@@ -5,8 +5,9 @@ from pathlib import Path
 import subprocess
 import sys
 
-INBOX = Path('/home/ubuntu/csce465-agentsec/hw3/inbox')
-PROJECT = Path('/home/ubuntu/csce465-agentsec/465-HW3')
+INBOX = Path.home() / 'csce465-agentsec/hw3/inbox'
+PROJECT = Path(__file__).resolve().parent.parent
+LAB = Path.home() / 'csce465-agentsec/hw3'
 PARSER = PROJECT / 'legacy_log_parser'
 
 
@@ -27,7 +28,7 @@ def main() -> int:
         return 2
     fd = os.open(raw, os.O_RDONLY | os.O_NOFOLLOW)
     try:
-        result = subprocess.run([str(PARSER), f'/proc/self/fd/{fd}'], cwd=PROJECT,
+        result = subprocess.run([str(PARSER), f'/proc/self/fd/{fd}'], cwd=LAB,
                                 pass_fds=(fd,), capture_output=True, text=True,
                                 timeout=10, check=False)
     finally:

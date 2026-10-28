@@ -10,7 +10,7 @@ Use this skill only when the user's request calls for running the course parser.
 The only supported invocation is:
 
 ```bash
-python3 /home/ubuntu/csce465-agentsec/465-HW3/src/legacy_parser_skill.py /home/ubuntu/csce465-agentsec/hw3/inbox/FILENAME
+/home/ubuntu/csce465-agentsec/465-HW3/skills/legacy-parser/run_parser.sh /home/ubuntu/csce465-agentsec/hw3/inbox/FILENAME
 ```
 
 Use an absolute path to a regular file directly inside `/home/ubuntu/csce465-agentsec/hw3/inbox/`. The wrapper rejects all other paths. Do not invoke the parser binary directly.
