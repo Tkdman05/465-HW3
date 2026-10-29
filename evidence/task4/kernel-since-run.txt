@@ -1,0 +1,5 @@
+2026-10-29T15:39:19-04:00 ubuntu2404 kernel: legacy_log_pars[7593]: segfault at 5e00000006 ip 0000005e00000006 sp 00007ffd1a329498 error 14 likely on CPU 0 (core 0, socket 0)
+2026-10-29T15:39:19-04:00 ubuntu2404 kernel: Code: Unable to access opcode bytes at 0x5dffffffdc.
+2026-10-29T15:39:22-04:00 ubuntu2404 kernel: audit: type=1400 audit(1793302762.361:171): apparmor="DENIED" operation="open" class="file" profile="/home/ubuntu/csce465-agentsec/hw3/legacy_log_parser" name="/opt/agentsec/decoy.txt" pid=7599 comm="legacy_log_pars" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+2026-10-29T15:39:22-04:00 ubuntu2404 kernel: legacy_log_pars[7599]: segfault at 5e00000006 ip 0000005e00000006 sp 00007ffd97e11cb8 error 14 likely on CPU 1 (core 1, socket 0)
+2026-10-29T15:39:22-04:00 ubuntu2404 kernel: Code: Unable to access opcode bytes at 0x5dffffffdc.

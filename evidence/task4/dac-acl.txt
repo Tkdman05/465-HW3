@@ -1,0 +1,79 @@
+# file: /home/ubuntu
+# owner: ubuntu
+# group: ubuntu
+user::rwx
+user:root:--x
+user:agentlab:--x
+group::r-x
+mask::r-x
+other::---
+
+# file: /home/ubuntu/csce465-agentsec
+# owner: ubuntu
+# group: ubuntu
+user::rwx
+user:root:--x
+user:agentlab:--x
+group::---
+mask::--x
+other::---
+
+# file: /home/ubuntu/csce465-agentsec/hw3
+# owner: ubuntu
+# group: ubuntu
+user::rwx
+user:root:--x
+user:agentlab:--x
+group::---
+mask::--x
+other::---
+
+# file: /home/ubuntu/csce465-agentsec/hw3/legacy_log_parser
+# owner: ubuntu
+# group: ubuntu
+user::rwx
+user:root:r-x
+user:agentlab:r-x
+group::---
+mask::r-x
+other::---
+
+# file: /home/ubuntu/csce465-agentsec/hw3/inbox
+# owner: ubuntu
+# group: ubuntu
+user::rwx
+user:root:r-x
+user:agentlab:r-x
+group::---
+mask::r-x
+other::---
+
+# file: /home/ubuntu/csce465-agentsec/hw3/inbox/payload.bin
+# owner: ubuntu
+# group: ubuntu
+user::rw-
+user:root:r--
+user:agentlab:r--
+group::---
+mask::r--
+other::---
+
+# file: /home/ubuntu/csce465-agentsec/hw3/markers
+# owner: ubuntu
+# group: ubuntu
+user::rwx
+user:root:-wx
+user:agentlab:-wx
+group::---
+mask::-wx
+other::---
+
+# file: /home/ubuntu/csce465-agentsec/hw3/markers/ret2win.txt
+# owner: ubuntu
+# group: ubuntu
+user::rw-
+user:root:rw-
+user:agentlab:rw-
+group::---
+mask::rw-
+other::---

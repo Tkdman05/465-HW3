@@ -1,0 +1,23 @@
+timestamp: 2026-10-29 15:39:19
+profile status:
+   /home/ubuntu/csce465-agentsec/hw3/legacy_log_parser
+agentlab identity:
+uid=997(agentlab) gid=984(agentlab) groups=984(agentlab)
+decoy DAC mode:
+/opt/agentsec/decoy.txt 600 root:root
+marker before:
+markers/ret2win.txt 19 bytes 2026-10-29 15:36:51.180051896 -0400 ubuntu:ubuntu
+
+agentlab confined payload run:
+tests/run_task4.sh: line 33:  7591 Segmentation fault      sudo -u agentlab "$runtime/legacy_log_parser" "$runtime/inbox/payload.bin" 2>&1
+agentlab parser exit: 139
+marker after agentlab run:
+markers/ret2win.txt 19 bytes 2026-10-29 15:39:19.979887073 -0400 ubuntu:ubuntu
+ret2win successful
+
+root confined payload run (MAC cross-check):
+tests/run_task4.sh: line 33:  7597 Segmentation fault      sudo "$runtime/legacy_log_parser" "$runtime/inbox/payload.bin" 2>&1
+root parser exit: 139
+marker after root run:
+markers/ret2win.txt 19 bytes 2026-10-29 15:39:22.360720810 -0400 ubuntu:ubuntu
+ret2win successful

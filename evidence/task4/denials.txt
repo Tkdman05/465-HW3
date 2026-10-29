@@ -1,0 +1,1 @@
+2026-10-29T15:39:22-04:00 ubuntu2404 kernel: audit: type=1400 audit(1793302762.361:171): apparmor="DENIED" operation="open" class="file" profile="/home/ubuntu/csce465-agentsec/hw3/legacy_log_parser" name="/opt/agentsec/decoy.txt" pid=7599 comm="legacy_log_pars" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
